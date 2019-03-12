@@ -1,6 +1,27 @@
 ---
-title: "workout01-bernard-gburek.Rmd"
-output: html_document
+title: "Workout 1"
+author: "Bernard Gburek"
+output: github_document
 ---
 
+```{r}
+library(dplyr)
+shots_data <- read.csv(file = '../data/shots-data.csv')
+
+effective_shooting_precentage <- shots_data %>%
+  group_by(name) %>%
+  summarise(total = n(), made = sum(shot_made_flag == 'shot_yes'), percentage = made / total) %>%
+  arrange(desc(percentage))
+two_point_shooting <- shots_data %>%
+  filter(shot_type == "2PT Field Goal") %>%
+  group_by(name) %>%
+  summarise(total = n(), made = sum(shot_made_flag == 'shot_yes'), percentage = made / total) %>%
+  arrange(desc(percentage))
+three_point_shooting <- shots_data %>%
+  filter(shot_type == "3PT Field Goal") %>%
+  group_by(name) %>%
+  summarise(total = n(), made = sum(shot_made_flag == 'shot_yes'), percentage = made / total) %>%
+  arrange(desc(percentage))
+three_point_shooting
+```
 
