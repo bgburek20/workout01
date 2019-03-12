@@ -1,9 +1,24 @@
-# Title:
-# Descriptions:
-# Inputs:
-# Outputs:
+# Title: make-shot-charts-script.R
+# Descriptions: Makes shot charts and image files for each of the 5 major
+# GSW players.
+# Inputs: ./images/nba-court.jpg,
+# thompson, curry, durant, green, iguodala, and gsw
+# Outputs: Creates variables for shot charts:
+# thompson_shot_chart,
+# curry_shot_chart, 
+# durant_shot_chart, 
+# iguodala_shot_chart, 
+# green_shot_chart, 
+# gsw_shot_chart
+# ./images/stephen-curry-shot-chart.pdf, 
+# ./images/klay-thompson-shot-chart.pdf,
+# ./images/kevin-durant-shot-chart.pdf,
+# ./images/andre-iguodala-shot-chart.pdf,
+# ./images/draymond-green-shot-chart.pdf,
+# ./images/gsw-shot-charts.pdf",
+# ./images/gsw-shot-charts.png"
 
-# Set working directory to workout01
+# Ensure working directory is set to workout01
 library("jpeg")
 library("grid")
 library("ggplot2")
