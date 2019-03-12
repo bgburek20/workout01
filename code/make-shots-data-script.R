@@ -9,13 +9,14 @@ data_types = c("character", "character", "numeric", "numeric", "numeric", "numer
                "character", "character", "character", "numeric", "character",
                "numeric", "numeric")
 
+# Change working directory to workout01
 # Import CSV files
-curry <- read.csv("./Desktop/workout01/data/stephen-curry.csv",
+curry <- read.csv("./data/stephen-curry.csv",
                   colClasses = data_types, stringsAsFactors = FALSE)
-green <- read.csv("./Desktop/workout01/data/draymond-green.csv",colClasses = data_types, stringsAsFactors = FALSE)
-durant <- read.csv("./Desktop/workout01/data/kevin-durant.csv",colClasses = data_types, stringsAsFactors = FALSE)
-thompson <- read.csv("./Desktop/workout01/data/klay-thompson.csv", colClasses = data_types, stringsAsFactors = FALSE)
-iguodala <- read.csv("./Desktop/workout01/data/andre-iguodala.csv", colClasses = data_types, stringsAsFactors = FALSE)
+green <- read.csv("./data/draymond-green.csv",colClasses = data_types, stringsAsFactors = FALSE)
+durant <- read.csv("./data/kevin-durant.csv",colClasses = data_types, stringsAsFactors = FALSE)
+thompson <- read.csv("./data/klay-thompson.csv", colClasses = data_types, stringsAsFactors = FALSE)
+iguodala <- read.csv("./data/andre-iguodala.csv", colClasses = data_types, stringsAsFactors = FALSE)
 
 # Add column name with player name
 curry$name <- c("Stephen Curry")
@@ -44,19 +45,19 @@ thompson$minute <- (thompson$period * 12) - thompson$minutes_remaining
 iguodala$minute <- (iguodala$period * 12) - iguodala$minutes_remaining
 
 # Sink summary output to individual text_files in output
-sink("./Desktop/workout01/output/stephen-curry-summary.txt")
+sink("./output/stephen-curry-summary.txt")
 summary(curry)
 sink()
-sink("./Desktop/workout01/output/draymond-green-summary.txt")
+sink("./output/draymond-green-summary.txt")
 summary(green)
 sink()
-sink("./Desktop/workout01/output/kevin-durant-summary.txt")
+sink("./output/kevin-durant-summary.txt")
 summary(durant)
 sink()
-sink("./Desktop/workout01/output/klay-thompson-summary.txt")
+sink("./output/klay-thompson-summary.txt")
 summary(thompson)
 sink()
-sink("./Desktop/workout01/output/andre-iguodala-summary.txt")
+sink("./output/andre-iguodala-summary.txt")
 summary(iguodala)
 sink()
 
@@ -65,9 +66,9 @@ sink()
 gsw -> rbind(curry, green, durant, thompson, iguodala)
 
 # Send it as .csv to the data folder
-write.csv(gsw, "./Desktop/workout01/data/shots-data-summary.txt")
+write.csv(gsw, "./data/shots-data.csv")
 
 # Sink a summary output of the assembled table
-sink("./Desktop/workout01/output/shots-data-summary.txt")
+sink("./output/shots-data-summary.txt")
 summary(gsw)
 sink()
