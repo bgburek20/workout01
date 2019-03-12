@@ -19,10 +19,10 @@
                     Mean   :12.17                      Mean   :  -7.17  
                     3rd Qu.:25.00                      3rd Qu.:  18.75  
                     Max.   :55.00                      Max.   : 240.00  
-       y             name               minute     
- Min.   :-31.0   Length:578         Min.   : 1.00  
- 1st Qu.:  8.0   Class :character   1st Qu.:10.00  
- Median : 36.0   Mode  :character   Median :23.00  
- Mean   :100.6                      Mean   :22.39  
- 3rd Qu.:217.0                      3rd Qu.:33.00  
- Max.   :535.0                      Max.   :48.00  
+       y        
+ Min.   :-31.0  
+ 1st Qu.:  8.0  
+ Median : 36.0  
+ Mean   :100.6  
+ 3rd Qu.:217.0  
+ Max.   :535.0  
