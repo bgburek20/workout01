@@ -1,17 +1,36 @@
 # Title: make-shots-data-script.R
 # Description: Imports the player shot profiles, modifies tables, creates summaries,
-# and sinks a combined table of player shot profiles.
-# Inputs: No inputs are required for this script
-# Outputs: player-name-summary.txt, shots-data.csv, and shots-data-summary.txt
+# and a combined table of player shot profiles.
+# Inputs: ./data/stephen-curry.csv, ./data/klay-thompson.csv,
+# ./data/kevin-durant.csv, ./data/andre-iguodala.csv, 
+# and ./data/draymond-green.csv
+# Outputs: ./output/stephen-curry-summary.txt, ./output/klay-thompson-summary.txt,
+# ./output/kevin-durant-summary.txt, ./output/andre-iguodala-summary.txt,
+# ./output/draymond-green_summary.txt, ./data/shots-data.csv, 
+# ./output/shots-data-summary.txt,
+
+
+# Ensure that current working directory is set to parent directory 
+# workout01.
 
 # Specify data types
-data_types = c("character", "character", "numeric", "numeric", "numeric", "numeric",
-               "character", "character", "character", "numeric", "character",
-               "numeric", "numeric")
+data_types = c("character", #team_name
+               "character", #game_date
+               "numeric", #season
+               "numeric", #period
+               "numeric", #minutes_remaining
+               "numeric", #seconds_remaining
+               "character", #shot_made_flag
+               "character", #action_type
+               "character", #shot_type
+               "numeric", #shot_distance
+               "character", #opponent
+               "numeric", #x
+               "numeric") #y
 
 
 # Import CSV files
-curry <- read.csv("../data/stephen-curry.csv",
+curry <- read.csv("./data/stephen-curry.csv",
                   colClasses = data_types, stringsAsFactors = FALSE)
 green <- read.csv("./data/draymond-green.csv",colClasses = data_types, stringsAsFactors = FALSE)
 durant <- read.csv("./data/kevin-durant.csv",colClasses = data_types, stringsAsFactors = FALSE)
@@ -72,3 +91,4 @@ write.csv(gsw, "./data/shots-data.csv")
 sink("./output/shots-data-summary.txt")
 summary(gsw)
 sink()
+
