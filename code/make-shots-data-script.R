@@ -9,9 +9,9 @@ data_types = c("character", "character", "numeric", "numeric", "numeric", "numer
                "character", "character", "character", "numeric", "character",
                "numeric", "numeric")
 
-# Change working directory to workout01
+
 # Import CSV files
-curry <- read.csv("./data/stephen-curry.csv",
+curry <- read.csv("../data/stephen-curry.csv",
                   colClasses = data_types, stringsAsFactors = FALSE)
 green <- read.csv("./data/draymond-green.csv",colClasses = data_types, stringsAsFactors = FALSE)
 durant <- read.csv("./data/kevin-durant.csv",colClasses = data_types, stringsAsFactors = FALSE)
