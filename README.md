@@ -1,0 +1,3 @@
+There are three purposes to this assignment. 1) To get the opportunity to start working with a more complex file structure and uplodaing files to GitHub. 2) To visualize the shot data of a handful of players from the Golden State Warriors, along with other summaries and visualizations. 3) To produce a report document on the results of this data that is not just a list of code and output without a narrative. 
+
+To ensure that your code works properly, please make sure that your current working directory is set to parent directory workout01. 
