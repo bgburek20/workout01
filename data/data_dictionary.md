@@ -16,5 +16,4 @@ x: The x coordinate (measured in inches) of where a shot occurred
 
 y: The y coordinate (measured in inches) of where a shot occured
 
-# Complete
 
