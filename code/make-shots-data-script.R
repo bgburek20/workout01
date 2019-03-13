@@ -4,10 +4,14 @@
 # Inputs: ./data/stephen-curry.csv, ./data/klay-thompson.csv,
 # ./data/kevin-durant.csv, ./data/andre-iguodala.csv, 
 # and ./data/draymond-green.csv
-# Outputs: ./output/stephen-curry-summary.txt, ./output/klay-thompson-summary.txt,
-# ./output/kevin-durant-summary.txt, ./output/andre-iguodala-summary.txt,
-# ./output/draymond-green_summary.txt, ./data/shots-data.csv, 
+# Outputs: ./output/stephen-curry-summary.txt, 
+# ./output/klay-thompson-summary.txt,
+# ./output/kevin-durant-summary.txt, 
+# ./output/andre-iguodala-summary.txt,
+# ./output/draymond-green_summary.txt, 
+# ./data/shots-data.csv, 
 # ./output/shots-data-summary.txt,
+# tables: thompson, curry, durant, green, iguodala, and gsw
 
 
 # Ensure that current working directory is set to parent directory 
